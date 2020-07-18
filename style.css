@@ -1,162 +1,242 @@
-* {
-    padding: 0;
+html {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+body {
     margin: 0;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif
 }
+img {
+    width: 100%;
+}
+nav {
+    background-color: #180e0b;
 
-header {
-    height: 110px;
     display: flex;
-    background-color:black;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-color: bisque;}
 
-header h1 {
-   
-    margin-left: 50px;
-    color:bisque;
-    font-size: 38px;
+    padding-left: 34px;
+    padding-right: 34px;
+    color: white;
+    height: 89px;
 }
 
-.img1{ height:375px ;
-    width:134px 
 
+h1, ul {
+    margin: 0;
 }
-.h1{;
-height: 93px;
-widht:27px; 
-color: white; }
-header nav {
+h1 {
+    font-size: 34px;
+    font-size: calc(20pt + (34 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+h2 {
+    font-weight: 700; /*bold*/
+    font-size: 34px;
+}
+nav ul {
+    list-style-type: none;
     display: flex;
-    margin-right: 50px;
-    margin-top: 17px;
-    font-size: 27px;
+    align-items: center;
 }
-main {
+nav ul li + li {
+    margin-left: 21px;
+}
+nav a {
+    color: white;
+    text-decoration: none
+}
+nav button {
+    background-color: transparent;
+    border-width: 0;
+    padding: 0
+}
+nav button svg {
+    width: 34px;
+    height: 34px;
+}
+.active {
+    background-color: #56c9d6;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+header img {
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+section {
+    padding: 144px 89px;
     display: flex;
-    margin: 50px 50px 500px;
+}
+
+.primeira {
+    flex-wrap: wrap;
     justify-content: space-between;
-    text-align: left;
+}
+.primeira article {
+    width: 345px;
+}
+.segunda {
+    background-color: #180e0b;
+    color: #b4654d;
+}
+.esquerda, .direita {
+    flex-basis: 50%;
+    /* width: 50% */
+}
+.esquerda {
+    display: flex;
+    padding-right: 34px;
+}
+.esquerda article {
+    display: flex;
+    margin-top: 21px;
+}
+.esquerda article img {
+    width: 89px;
+    height: 89px;
+}
+p {
+    line-height: 1.61;
+    font-size: 18px;
 }
 
-.media{
-    margin-block-start: 5cm;
-    height: 100px;
-    display:flexbox;
+.segunda .esquerda p {
+    margin-left: 13px;
 }
 
-article {
+.esquerda div:last-of-type{
+    margin-left: 34px;
+}
+.terceira {
+    background-color: #080403;
+    color: #b4654d;
+}
+.terceira .t-esquerda a {
+    color: #cf816a;
+}
+.t-esquerda {
+    flex-basis: 75%;
+    padding-right: 89px;
+}
+.t-direita {
+    flex-basis: 25%;
+}
+.t-direita ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.t-direita ul li + li {
+    margin-top: 21px;
+}
+.t-direita a {
+    text-decoration: underline;
+    color: inherit;
+}
+footer {
+    background-color: #030201;
+    text-align: center;
+    padding: 34px 89px;
+    color: #b4654d;
+}
+footer p {
+    margin: 0;
+}
+.esquerda article p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
-    background-color: #372019;
-    color: #8c5240;}
-
-    ul {
-        display: block;
-        list-style-type: disc;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 40px;
+    max-width: 865px;
+    width: 100%;
+}
+.nav-container ul {
+    padding-left: 0;
+}
+.nav-container ul li a {
+    font-size: 13px;
+}
+.nav-container img {
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+    object-position: center;
+}
+@media (min-width: 1024px) {
+    nav button {
+        display: none;
+    }
+}
+@media (max-width: 1023px){
+    nav ul {
+        display: none;
+    }
+    header img {
+        height: 134px;
     }
     section {
-        display: block;
+        padding: 36px;
     }
-    .pre_footer {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        text-align: left;
-        color: #8c5240;
-        padding: 20px 80px 20px 50px;
-        background-color: #261611;
+    .primeira article {
+        width: 45%;
     }
-    .pre_footer h2 {
-        color: #bc765f;
-        margin-bottom: 20px;
+    .primeira article.mb {
+        margin-bottom: 34px;
     }
-    a:-webkit-any-link {
-        color: -webkit-link;
-        cursor: pointer;
-        text-decoration: underline;
+    .primeira article h2 {
+        font-size: 13pt;
+        font-weight: bold;
     }
+    .primeira article p {
+        font-size: 10pt;
+        line-height: 16.1pt;
+    }
+    section, .esquerda {
+        flex-wrap: wrap;
+    }
+    .esquerda, .direita,
+    .t-esquerda, .t-direita {
+        flex-basis: 100%;
+    }
+    .esquerda div:last-of-type {
+        margin-left: 0;
+    }
+    .t-esquerda {
+        padding-right: 0;
+    }
+    .esquerda article img {
+        width: 69px;
+        height: 69px;
+    }
+}
 
-    .section_1 {
-        margin-right: 50px;
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .esquerda {
+        flex-wrap: wrap;
     }
-    section {
+    .esquerda div:last-of-type {
+        margin-left: 0;
+    }
+}
 
-        margin: 0 50px;
-        flex-direction: column;
-    }
 
-    footer {
-        display: block;
-    }
-
-    footer {
-        color: #8c5240;
-        height: 50px;
-        padding: 0 50px;
-        display: flex;
-        justify-content: space-between;
-        background-color: #180e0b;
-        text-align: center;
-        align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-        nav {
-            display: none;
-        }
-    }
-    @media (max-width: 1023px){
-        nav  {
-            display: none;
-        }
-        .img1 {
-            height: 134px;
-        }
-        div {
-            padding: 36px;
-        }
-        .prasent section {
-           
-            width: 45%;
-        }
-    
-        
-        .prasent section h2 {
-            font-size: 13pt;
-            font-weight: bold;
-        }
-        .prasent section p {
-            font-size: 10pt;
-            line-height: 16.1pt;
-        }
-        section, .prasent {
-            flex-wrap: wrap;
-        }
-        .prasent, .direita,
-         {
-            flex-basis: 100%;
-        }
-       
-        ..prasent {
-            padding-right: 0;
-        }
-        .prasent ul img {
-            width: 69px;
-            height: 69px;
-        }
-    }
-    
-    @media (min-width: 1024px) and (max-width: 1280px) {
-        .prasent {
-            flex-wrap: wrap;
-        }
-        
-    
+.profile {
+    padding-top: 0;
+    position: relative;
+}
+.profile img {
+    width: 260px;
+    height: 260px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    /* margin-top: 130px; */
+    /* position: absolute; top: -130px; */
+}
